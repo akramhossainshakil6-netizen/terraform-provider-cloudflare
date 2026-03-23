@@ -1,5 +1,34 @@
 # Changelog
 
+## 5.19.0-beta.3 (2026-03-23)
+
+Full Changelog: [v5.19.0-beta.2...v5.19.0-beta.3](https://github.com/cloudflare/terraform-provider-cloudflare/compare/v5.19.0-beta.2...v5.19.0-beta.3)
+
+### Features
+
+* **zone_setting:** modernize migration tests ([aa8d74d](https://github.com/cloudflare/terraform-provider-cloudflare/commit/aa8d74d63810fac8e71395cdfeda0df322550144))
+
+
+### Bug Fixes
+
+* **certificate_pack:** initialize empty lists instead of null in state upgrader ([2017a43](https://github.com/cloudflare/terraform-provider-cloudflare/commit/2017a43ee6c37d392fc2fbb551da8ca21718309d))
+* **dlp_predefined_profile:** eliminate perpetual entries and enabled_entries drift ([92dcfc0](https://github.com/cloudflare/terraform-provider-cloudflare/commit/92dcfc0a15bb72251138c805896abb9e52a4c59f))
+* **dns_record:** avoid unnecessary drift for ipv4_only and ipv6_only attributes ([3df5e03](https://github.com/cloudflare/terraform-provider-cloudflare/commit/3df5e03d527234fa1d9483d498a2416440031286))
+* **docs:** GetResourceRename limitations ([18fed9a](https://github.com/cloudflare/terraform-provider-cloudflare/commit/18fed9a47241f1e02a55b1cc0cfd5d99a0d621ab))
+* **drift:** preserve prior state values for optional fields not returned by API ([b717f4d](https://github.com/cloudflare/terraform-provider-cloudflare/commit/b717f4deb9cef6a80d9ebdc736bfa8afecbc4fa6))
+* **workers_script:** model drift ([5ae89c4](https://github.com/cloudflare/terraform-provider-cloudflare/commit/5ae89c4d3f39954f9bbdeaeee8bb742d5fb3248c))
+* **zero_trust_device_managed_networks:** upgrade resource state ([7c14bf5](https://github.com/cloudflare/terraform-provider-cloudflare/commit/7c14bf5852fafadcf81be45f8062b6485d73bd06))
+* **zone_setting:** actually write correct testdata file content ([d249365](https://github.com/cloudflare/terraform-provider-cloudflare/commit/d2493653aa8ba4c91b9921cf340b5424e4e4cec0))
+* **zone_setting:** add import blocks to v5 migration testdata ([8064042](https://github.com/cloudflare/terraform-provider-cloudflare/commit/80640428d7f488657429fbab26517f55a97238fe))
+* **zone_setting:** correct migration testdata and test structure ([b1b5932](https://github.com/cloudflare/terraform-provider-cloudflare/commit/b1b593299d40736d00081b528196bc61027e7910))
+* **zone_setting:** remove obsolete state entries before terraform plan in migration tests ([4b49603](https://github.com/cloudflare/terraform-provider-cloudflare/commit/4b4960359a803176125248a4ff507879f0abbc87))
+
+
+### Documentation
+
+* add application-scoped access policy migration guidance ([40d7d43](https://github.com/cloudflare/terraform-provider-cloudflare/commit/40d7d4396e0de5bfee00578caf26932e6d10c36a))
+* update zone_settings_override migration guide for tf-migrate v2 workflow ([5a46008](https://github.com/cloudflare/terraform-provider-cloudflare/commit/5a460082ee31819ef76111891c00fb1cf9de1575))
+
 ## 5.19.0-beta.2 (2026-03-17)
 
 Full Changelog: [v5.19.0-beta.1...v5.19.0-beta.2](https://github.com/cloudflare/terraform-provider-cloudflare/compare/v5.19.0-beta.1...v5.19.0-beta.2)
