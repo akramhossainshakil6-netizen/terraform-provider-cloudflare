@@ -207,10 +207,10 @@ func ResourceSchema(ctx context.Context) schema.Schema {
 								),
 							},
 						},
-						"dataset": schema.StringAttribute{
-							Description: "The name of the dataset to bind to.",
-							Optional:    true,
-						},
+								"dataset": schema.StringAttribute{
+						Description: "The name of the dataset to bind to.",
+						Optional:    true,
+					},
 						"id": schema.StringAttribute{
 							Description: "Identifier of the D1 database to bind to.",
 							Optional:    true,
@@ -219,31 +219,31 @@ func ResourceSchema(ctx context.Context) schema.Schema {
 							Description: "The name of the dispatch namespace.",
 							Optional:    true,
 						},
-						"outbound": schema.SingleNestedAttribute{
-							Description: "Outbound worker.",
-							Optional:    true,
-							Attributes: map[string]schema.Attribute{
-								"params": schema.ListAttribute{
-									Description: "Pass information from the Dispatch Worker to the Outbound Worker through the parameters.",
-									Optional:    true,
-									ElementType: types.StringType,
-								},
-								"worker": schema.SingleNestedAttribute{
-									Description: "Outbound worker.",
-									Optional:    true,
-									Attributes: map[string]schema.Attribute{
-										"environment": schema.StringAttribute{
-											Description: "Environment of the outbound worker.",
-											Optional:    true,
-										},
-										"service": schema.StringAttribute{
-											Description: "Name of the outbound worker.",
-											Optional:    true,
-										},
+								"outbound": schema.SingleNestedAttribute{
+						Description: "Outbound worker.",
+						Optional:    true,
+						Attributes: map[string]schema.Attribute{
+							"params": schema.ListAttribute{
+								Description: "Pass information from the Dispatch Worker to the Outbound Worker through the parameters.",
+								Optional:    true,
+								ElementType: types.StringType,
+							},
+							"worker": schema.SingleNestedAttribute{
+								Description: "Outbound worker.",
+								Optional:    true,
+								Attributes: map[string]schema.Attribute{
+									"environment": schema.StringAttribute{
+										Description: "Environment of the outbound worker.",
+										Optional:    true,
+									},
+									"service": schema.StringAttribute{
+										Description: "Name of the outbound worker.",
+										Optional:    true,
 									},
 								},
 							},
 						},
+					},
 						"class_name": schema.StringAttribute{
 							Description: "The exported class name of the Durable Object.",
 							Computed:    true,
@@ -423,6 +423,10 @@ func ResourceSchema(ctx context.Context) schema.Schema {
 						},
 						"service_id": schema.StringAttribute{
 							Description: "Identifier of the VPC service to bind to.",
+							Optional:    true,
+						},
+						"instance_name": schema.StringAttribute{
+							Description: "The user-chosen instance name. Must exist at deploy time. The worker can search, chat, update, and manage items/jobs on this instance.",
 							Optional:    true,
 						},
 					},
